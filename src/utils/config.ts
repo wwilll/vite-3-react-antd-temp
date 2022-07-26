@@ -3,7 +3,7 @@
  * 获取配置文件是系统前置步骤
  * 此处请求应使用原生的axios，fetch等方式，因封装的request需要用到获取的配置信息
  */
-import axios from 'axios';
+// import axios from 'axios';
 import loadScript from './loadScripts';
 
 window.config = window.config || {

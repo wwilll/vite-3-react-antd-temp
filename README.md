@@ -56,6 +56,7 @@ root_path=home
 - [√] es5 打包
 - [√] ts、prettier 格式化
 - [√] less 模块、px2view、styled-components、 styled-components2vw
+- [√] [eslint](https://segmentfault.com/a/1190000041954694)、vite-plugin-checker 插件应用 eslintconfig、[插件集](https://juejin.cn/post/6998059092497399845)
 - [√] 非根目录部署
 - [√] 简易示例页面
 - [√] 国际化配置

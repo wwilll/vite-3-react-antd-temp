@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+// import { useSearchParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { useMeasure } from 'react-use';
 
@@ -41,8 +41,9 @@ const WrapperDemo = styled.div`
 `;
 
 function Demo() {
-  const [searchParams] = useSearchParams();
-  const [ref, { x, y, width, height, top, right, bottom, left }] = useMeasure();
+  // const [searchParams] = useSearchParams();
+  // const [ref, { x, y, width, height, top, right, bottom, left }] = useMeasure();
+  const [ref, { width, height }] = useMeasure();
 
   useEffect(() => {
     init(width, height);

@@ -10,10 +10,11 @@ let currNavigate: NavigateFunction | null = null;
 // 获取导航对象，以便在其他非组件中调用
 export const getNavigate = () => currNavigate;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Layout = ({ menuInfo }: { menuInfo: IRouteMenu }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { setPageInfo, pageInfo } = useModel('useGlobalModel');
+  const { setPageInfo } = useModel('useGlobalModel');
 
   // console.log('mainLayout=============>', pageInfo, __APP_ENV__, menuInfo, location.pathname);
 

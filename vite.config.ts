@@ -7,6 +7,8 @@ import VitePrettier from 'vite-plugin-prettier';
 // 作者说VitePrettier不需要其他配置，但是为了vscode编辑器能识别，还是得写配置文件
 import prettierConfig from '.prettierrc.js';
 import svgr from '@svgr/rollup';
+/* eslint-disable */
+const eslintConfig = require('.eslintrc.js');
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -37,7 +39,13 @@ export default defineConfig(({ command, mode }) => {
     },
     plugins: [
       react(),
-      checker({ typescript: true }),
+      checker({
+        typescript: true,
+        eslint: {
+          lintCommand: 'eslint "./src/**/*.{ts,tsx}"', // for example, lint .ts & .tsx
+          ...eslintConfig,
+        },
+      }),
       ...legacyMode,
       VitePrettier(prettierConfig),
       svgr(),

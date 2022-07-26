@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import request from '@/utils/request';
 
 export interface IUserInfo {
