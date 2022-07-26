@@ -23,7 +23,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   ignorePatterns: ['**/plugin-model/**', '**.md', 'README.md'],
   rules: {
-    'no-debugger': 'warn',
+    'no-debugger': 'error',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-empty-function': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -32,7 +32,6 @@ module.exports = {
     '@typescript-eslint/no-implicit-any': 'off',
     'react/display-name': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
-    'no-non-null-assertion': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     'no-unused-expressions': 'error',

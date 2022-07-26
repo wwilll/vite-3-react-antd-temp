@@ -10,7 +10,9 @@
     "build": "vite build",
     "buildes5": "cross-env es_target=es5 vite build",
     "buildmap": "cross-env soucemap=true vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "dependencies": {
     "antd": "^4.21.7",
@@ -37,7 +39,9 @@
     "autoprefixer": "^10.4.7",
     "eslint": "^8.20.0",
     "eslint-plugin-react": "^7.30.1",
+    "husky": "^8.0.0",
     "less": "^4.1.3",
+    "lint-staged": "^13.0.3",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-px-to-viewport-8-plugin": "^1.1.3",
     "styled-px2vw-plugin": "^1.0.1",
@@ -45,5 +49,10 @@
     "vite": "^3.0.0",
     "vite-plugin-checker": "^0.4.9",
     "vite-plugin-prettier": "^0.0.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx,jsx}": [
+      "eslint --fix"
+    ]
   }
 }
