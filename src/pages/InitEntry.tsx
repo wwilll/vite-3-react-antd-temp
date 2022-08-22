@@ -1,3 +1,4 @@
+import ErrorBoundary from '@/layout/ErrorBoundary';
 import { rootContainer } from '@/model/plugin-model/runtime';
 import Root from '@/router';
 import { initConfig } from '@/utils/config';
@@ -30,9 +31,19 @@ function InitEntry() {
 
   if (isInit) {
     return __APP_RUN_AT_STRICT_MODE__ ? (
-      <React.StrictMode>{rootContainer(<Root />)}</React.StrictMode>
+      <React.StrictMode>
+        {rootContainer(
+          <ErrorBoundary>
+            <Root />
+          </ErrorBoundary>,
+        )}
+      </React.StrictMode>
     ) : (
-      rootContainer(<Root />)
+      rootContainer(
+        <ErrorBoundary>
+          <Root />
+        </ErrorBoundary>,
+      )
     );
   } else {
     return (

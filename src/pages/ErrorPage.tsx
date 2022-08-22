@@ -2,7 +2,7 @@ import { goBack } from '@/utils';
 import { memo } from 'react';
 import styled from 'styled-components';
 
-const WrapperNotFound = styled.div`
+const WrapperError = styled.div`
   position: fixed;
   width: 100%;
   height: 100%;
@@ -27,15 +27,15 @@ const WrapperNotFound = styled.div`
   }
 `;
 
-function NotFoundTemp() {
+function ErrorPageTemp() {
   return (
-    <WrapperNotFound>
-      <h1>404</h1>
-      <span onClick={goBack}>返回</span>
-    </WrapperNotFound>
+    <WrapperError>
+      <h1>Error</h1>
+      <span onClick={goBack}>请联系管理员</span>
+    </WrapperError>
   );
 }
 
-const NotFound = memo(NotFoundTemp);
+const ErrorPage = memo(ErrorPageTemp);
 
-export default NotFound;
+export default ErrorPage;

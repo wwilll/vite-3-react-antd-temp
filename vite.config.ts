@@ -38,7 +38,13 @@ export default defineConfig(({ command, mode }) => {
       __APP_RUN_AT_STRICT_MODE__: env.strict_mode === 'true',
     },
     plugins: [
-      react(),
+      react({
+        babel: {
+          parserOpts: {
+            plugins: ['decorators-legacy', 'classProperties']
+          }
+        }
+      }),
       checker({
         typescript: true,
         eslint: {

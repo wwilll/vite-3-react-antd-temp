@@ -23,7 +23,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   ignorePatterns: ['**/plugin-model/**', '**.md', 'README.md'],
   rules: {
-    'no-debugger': 'error',
+    'no-debugger': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-empty-function': 'off',
     'react/react-in-jsx-scope': 'off',
